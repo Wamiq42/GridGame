@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 
 
     private List<List<GameObject>> listGameObjects;
+    private Vector3 offset = new Vector3(0, 1f, 0);
     private int currentColumn = 0;
     private int currentRow = 0;
     private int rows;
@@ -34,7 +35,7 @@ public class PlayerController : MonoBehaviour
                 {
                     currentColumn--;
                 }
-                transform.position = listGameObjects[currentRow][currentColumn].transform.position + new Vector3(0, 1f, 0);
+                transform.position = listGameObjects[currentRow][currentColumn].transform.position + offset;
             }
         }
         else if (Input.GetKeyDown(KeyCode.S))
@@ -46,7 +47,7 @@ public class PlayerController : MonoBehaviour
                     currentColumn++;
                 }
 
-                transform.position = listGameObjects[currentRow][currentColumn].transform.position + new Vector3(0, 1f, 0);
+                transform.position = listGameObjects[currentRow][currentColumn].transform.position + offset;
             }
         }
         else if (Input.GetKeyDown(KeyCode.A))
@@ -58,7 +59,7 @@ public class PlayerController : MonoBehaviour
                     currentRow--;
                 }
 
-                transform.position = listGameObjects[currentRow][currentColumn].transform.position + new Vector3(0, 1f, 0);
+                transform.position = listGameObjects[currentRow][currentColumn].transform.position + offset;
             }
         }
         else if (Input.GetKeyDown(KeyCode.D))
@@ -70,7 +71,7 @@ public class PlayerController : MonoBehaviour
                     currentRow++;
                 }
 
-                transform.position = listGameObjects[currentRow][currentColumn].transform.position + new Vector3(0, 1f, 0);
+                transform.position = listGameObjects[currentRow][currentColumn].transform.position + offset;
             }
         }
     }
